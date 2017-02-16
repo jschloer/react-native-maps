@@ -15,7 +15,7 @@
 #import "AIRMapCoordinate.h"
 #import "AIRMap.h"
 
-@interface AIRMapCircle: MKAnnotationView <MKOverlay>
+@interface AIRMapCircle: MKAnnotationView <MKOverlay,AIRZIndexed>
 
 @property (nonatomic, weak) AIRMap *map;
 
@@ -33,6 +33,7 @@
 @property (nonatomic, assign) CGLineJoin lineJoin;
 @property (nonatomic, assign) CGFloat lineDashPhase;
 @property (nonatomic, strong) NSArray <NSNumber *> *lineDashPattern;
+@property (nonatomic, assign) CGFloat zIndex;
 
 #pragma mark MKOverlay protocol
 

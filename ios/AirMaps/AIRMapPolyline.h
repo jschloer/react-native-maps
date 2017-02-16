@@ -15,7 +15,7 @@
 #import "AIRMap.h"
 
 
-@interface AIRMapPolyline: MKAnnotationView <MKOverlay>
+@interface AIRMapPolyline: MKAnnotationView <MKOverlay,AIRZIndexed>
 
 @property (nonatomic, weak) AIRMap *map;
 
@@ -32,6 +32,7 @@
 @property (nonatomic, assign) CGFloat lineDashPhase;
 @property (nonatomic, strong) NSArray <NSNumber *> *lineDashPattern;
 @property (nonatomic, copy) RCTBubblingEventBlock onPress;
+@property (nonatomic, assign) CGFloat zIndex;
 
 #pragma mark MKOverlay protocol
 
